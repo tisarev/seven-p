@@ -55,6 +55,7 @@ hr{
 .SGV-container{
     padding-left: calc(50% - 700px);
     padding-right: calc(50% - 700px);
+    margin-bottom: 20px;
 }
 .SGV-indent{
     margin-top: var(--indent-large);
@@ -106,6 +107,17 @@ p{
     overflow: hidden;
     position: relative;
 }
+.SGV-section-yellow2::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(rgba(255,208,5,0%), rgba(255,208,5,100%));
+    z-index: 3;
+}
 .SGV-section-black{
     background: var(--color-bg-black);
     border-radius: var(--br);
@@ -133,6 +145,13 @@ p{
     content: "";
     background: url('./smally-3-e.png') 0 0 no-repeat;
     z-index: 1;
+}
+.SGV-section-black2{
+    background: var(--color-bg-black);
+    border-radius: var(--br);
+    overflow: hidden;
+    position: relative;
+    color: var(--color-white);
 }
 .SGV-section-gray2{
     background: var(--color-bg-gray);
@@ -287,7 +306,46 @@ ul li::before{
 .SGV-w50{
     width: 50%;
 }
-
+ul.SGV-column3{
+    column-count: 3;
+}
+ul.SGV-column3 li{
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -moz-page-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    margin-bottom: 12px;
+    position: relative;
+}
+.SGV-selected{
+    background-color: var(--color-white);
+    color: var(--color-text-black);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: var(--br);
+    padding: 30px 25px;
+    margin: 20px 20px 0 20px;
+}
+.SGV-selected span{
+    color: var(--color-red);
+}
+.SGV-section-black2 img{
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
 /* screens */
 @media screen and (max-width: 1420px){
     .SGV-container{
@@ -350,6 +408,16 @@ ul li::before{
     .SGV-w50{
         width: 100%;
     }
+    .SGV-selected{
+        font-size: 1rem;
+        border-radius: var(--br);
+        padding: 15px;
+        margin: 10px 10px 0 10px;
+        text-wrap: balance;
+    }
+    ul.SGV-column3{
+        column-count: 2;
+    }
 }
 @media screen and (max-width: 768px){
     .SGV-info {
@@ -393,6 +461,16 @@ ul li::before{
     }
     .SGV-section-black br{
         display: none;
+    }
+    ul.SGV-column3{
+        column-count: 1;
+    }
+    .SGV-section-black2 img{
+        width: 200px;
+        height: auto;
+        float: none;
+        margin-right: 40px;
+        margin-bottom: 20px;
     }
 }
 @media screen and (max-width: 520px){
