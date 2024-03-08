@@ -12,7 +12,7 @@
 }
 :root{
     --font-family: "Open Sans", sans-serif;
-    --font-size: 16px;
+    --font-size: 18px;
 
     --color-bg-gray: #E4E4E4;
     --color-bg-yellow: #F5C243;
@@ -85,16 +85,53 @@ p{
     border-radius: var(--br);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.09), 0 40px 20px 0 rgba(0, 0, 0, 0.05);
 }
-svg.icon-rub{
+svg.icon-rub,
+svg.icon-loan,
+svg.icon-user,
+svg.icon-inv{
     width: 35px;
     height: 35px;
     fill: transparent;
 }
-svg.icon-g1{
+svg.icon-g1,
+svg.icon-g2,
+svg.icon-g3,
+svg.icon-g4{
     width: 100%;
     height: 80px;
     fill: transparent;
 }
+.SGV-number-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+}
+.SGV-number-list__item{
+    background-color: var(--color-white);
+    border-radius: var(--br);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.09), 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+}
+.SGV-number-list__item-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 10px 20px;
+}
+.SGV-number-list__item-title{
+    font-size: 1.25rem;
+}
+.SGV-number-list__item-number{
+    font-size: 2.25rem;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
 /* screens */
 @media screen and (max-width: 1420px){
     .SGV-container{
