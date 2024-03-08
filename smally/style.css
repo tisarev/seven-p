@@ -100,6 +100,12 @@ p{
     background: url('./smally-2-e.png') 0 0 no-repeat;
     z-index: 1;
 }
+.SGV-section-yellow2{
+    background: radial-gradient(64.8% 64.8% at 50.04% 100%, rgb(255, 208, 5) 0%, rgb(245, 194, 67) 100%);
+    border-radius: var(--br);
+    overflow: hidden;
+    position: relative;
+}
 .SGV-section-black{
     background: var(--color-bg-black);
     border-radius: var(--br);
@@ -126,6 +132,22 @@ p{
     right: -30px;
     content: "";
     background: url('./smally-3-e.png') 0 0 no-repeat;
+    z-index: 1;
+}
+.SGV-section-gray2{
+    background: var(--color-bg-gray);
+    border-radius: var(--br);
+    overflow: hidden;
+    position: relative;
+}
+.SGV-section-gray2::before{
+    position: absolute;
+    width: 321px;
+    height: 392px;
+    bottom: -70px;
+    right: -50px;
+    content: "";
+    background: url('./smally-4-e.png') 0 0 no-repeat;
     z-index: 1;
 }
 .SGV-padding-big{
@@ -196,6 +218,14 @@ svg.icon-g4{
     z-index: 2;
     margin-top: -130px;
 }
+.SGV-section-yellow2 img{
+    width: 100%;
+    height: auto;
+    margin-bottom: -6px;
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+}
 .SGV-section-black img{
     width: 100%;
     height: auto;
@@ -203,6 +233,14 @@ svg.icon-g4{
     position: relative;
     z-index: 2;
     margin-top: -130px;
+}
+.SGV-section-gray2 img{
+    width: 100%;
+    height: auto;
+    margin-bottom: -4px;
+    position: relative;
+    z-index: 2;
+    margin-top: -300px;
 }
 .SGV-padding{
     padding-top: var(--padding-big);
@@ -246,6 +284,9 @@ ul li::before{
     position: relative;
     z-index: 2;
 }
+.SGV-w50{
+    width: 50%;
+}
 
 /* screens */
 @media screen and (max-width: 1420px){
@@ -280,10 +321,14 @@ ul li::before{
         gap: 10px;
         margin-top: 10px;
     }
+    .SGV-section-gray2 img{
+        margin-top: -200px;
+    }
 }
 @media screen and (max-width: 1024px){
     .SGV-section-yellow img,
-    .SGV-section-black img{
+    .SGV-section-black img,
+    .SGV-section-gray2 img{
         margin-top: 20px;
     }
     .SGV-ul-right{
@@ -301,6 +346,9 @@ ul li::before{
     svg.icon-inv{
         width: 24px;
         height: 24px;
+    }
+    .SGV-w50{
+        width: 100%;
     }
 }
 @media screen and (max-width: 768px){
@@ -339,7 +387,8 @@ ul li::before{
         margin-top: var(--indent-light);
     }
     .SGV-section-yellow::before,
-    .SGV-section-black::before{
+    .SGV-section-black::before,
+    .SGV-section-gray2::before{
         display: none;
     }
     .SGV-section-black br{
