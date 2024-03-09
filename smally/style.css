@@ -348,6 +348,9 @@ ul.SGV-column3 li{
 .clearfix::after {
     clear: both;
 }
+.mb20{
+    padding-bottom: 20px;
+}
 /* screens */
 @media screen and (max-width: 1420px){
     .SGV-container{
