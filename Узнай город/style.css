@@ -61,6 +61,10 @@ h2{
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-wrap: balance;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 p{
     margin-bottom: 1rem;
@@ -85,6 +89,7 @@ p{
     width: 100%;
     min-height: 680px;
     background: url('./img2.png') center center no-repeat;
+    margin-top: 50px;
 }
 .SGV-img3{
     width: 100%;
@@ -106,12 +111,92 @@ ul, ul li {
     padding: 50px;
     width: 45%;
 }
+.SGV-img2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    overflow: hidden;
+}
+.SGV-img2 ul li{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+    font-size: 14px;
+    border-top: 1px solid #C2C2C2;
+    border-right: 1px solid #C2C2C2;
+    margin-top: -1px;
+    text-wrap: balance;
+}
+.SGV-img2 ul li:nth-child(3n){
+    border-right: none;
+}
+.SGV-page{
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 1420px){
+    .SGV-img3{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+}
 @media screen and (max-width: 1024px){
-
+    .SGV-img2{
+        min-height: auto;
+        background: none;
+    }
+    .SGV-img3{
+        min-height: auto;
+        background: none;
+    }
+    .SGV-img2 ul{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h2{
+        font-size: 1.2rem;
+        text-wrap: balance;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .SGV-img3__text{
+        padding: 20px;
+        width: 100%;
+        font-size: 14px;
+    }
 }
 @media screen and (max-width: 768px){
-
+    .SGV-img2 ul li{
+        width: 50%;
+        font-size: 12px;
+        padding: 10px;
+    }
+    .SGV-img3__text{
+        font-size: 12px;
+    }
+    .SGV-img2{
+        margin-top: 20px;
+    }
+    .SGV-img2 ul li:nth-child(3n){
+        border-right: 1px solid #C2C2C2;
+    }
+    .SGV-img2 ul li:nth-child(2n){
+        border-right: none;
+    }
+    .SGV-img2 ul li:last-of-type{
+        border-right: none;
+        width: 100%;
+    }
+    h2{
+        font-size: 1rem;
+    }
 }
 @media screen and (max-width: 520px){
-
+    
 }
