@@ -1,0 +1,62 @@
+@charset "utf-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+body{ 
+    width: 100%;
+    height: 100%;
+}
+img {
+    vertical-align: top;
+}
+hr{
+    margin: var(--indent-medium) 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #ddd;
+}
+/* Стили страницы */
+:root{
+    --font-family: "Open Sans", sans-serif;
+    --font-size: 16px;
+
+    --color-white: #fff;
+    --br: 0.75rem;
+}
+.SGV-NECO{
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-text-black);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #474751;
+    background-image: url('./img2.jpg'), url('./img3.png');
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    padding: 300px 10px 50px 10px;
+}
+.SGV-NECO img{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
