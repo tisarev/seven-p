@@ -1,0 +1,234 @@
+@charset "utf-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+body{ 
+    width: 100%;
+    height: 100%;
+}
+hr{
+    margin: var(--indent-medium) 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #ddd;
+}
+img {
+    vertical-align: top;
+}
+ul, ul li {
+    list-style: none;
+}
+/* Стили страницы */
+:root{
+    --font-family: "Open Sans", sans-serif;
+    --font-size: 18px;
+
+    --color-bg-gray: #E4E4E4;
+    --color-blue: #0188CC;
+    --color-text-black: #141414;
+    --color-white: #fff;
+
+    --padding-big: 3rem;
+
+    --br: 0.75rem;
+    --indent-large: 2rem;
+    --indent-medium: 1.25rem;
+    --indent-light: 0.375rem;
+}
+.SVG-grebnoi{
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-text-black);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: url('./img-top.jpg') center top no-repeat;
+}
+.SGV-container{
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+    margin-bottom: 20px;
+}
+.SGV-indent{
+    margin-top: var(--indent-large);
+}
+.SVG-grebnoi-top{
+    max-width: 900px;
+    width: 95%;
+    margin: 50px auto 120px auto;
+    text-align: center;
+    padding: 20px;
+    color: var(--color-white);
+    background: var(--color-blue);
+    border-radius: var(--br);
+}
+.SVG-grebnoi h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-blue);
+    text-align: center;
+}
+.SVG-grebnoi h3{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.SVG-grebnoi p{
+    margin-bottom: 1rem;
+    text-wrap: balance;
+    text-align: center;
+    color: #3C3C3C;
+}
+.SVG-grebnoi section{
+    margin-bottom: 50px;
+}
+.SVG-grebnoi img{
+    width: 100%;
+    margin-top: 20px;
+}
+.SVG-grebnoi__list{
+    display: flex;
+    justify-content: center;
+}
+.SVG-grebnoi__item{
+    padding: 10px;
+    width: 33%;
+}
+.SVG-grebnoi__item:nth-child(2){
+    border-left: 1px solid #CBD5E1;
+    border-right: 1px solid #CBD5E1;
+}
+
+.SVG-grebnoi svg{
+    width: 80px;
+    height: 80px;
+    fill: transparent;
+}
+.SVG-grebnoi__bottom{
+    background-color: #C5E7F8;
+}
+.SVG-grebnoi__bottom-text{
+    max-width: 900px;
+    width: 95%;
+    margin: 50px auto 100px;
+}
+.SVG-grebnoi p.p-blue{
+    text-align: center;
+    padding: 20px;
+    color: var(--color-white);
+    background: var(--color-blue);
+    border-radius: var(--br);
+    margin-top: 40px;
+}
+.SVG-grebnoi__ul{
+    width: 100%;
+    background-color: #E4E4E4;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.SVG-grebnoi__li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+/* screens */
+@media screen and (max-width: 1420px){
+    .SGV-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+}
+@media screen and (max-width: 1200px){
+    :root{
+        --font-size: 16px;
+    }
+}
+@media screen and (max-width: 1024px){
+    
+}
+@media screen and (max-width: 768px){
+    
+    :root {
+        --padding-big: 1rem;
+        --font-size: 14px;
+    }
+    .SVG-grebnoi h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .SVG-grebnoi-top {
+        max-width: 900px;
+        width: 95%;
+        margin: 20px auto 40px auto;
+    }
+    .SVG-grebnoi__list {
+        flex-direction: column;
+    }
+    .SVG-grebnoi__item {
+        width: 100%;
+        padding: 5px;
+    }
+    .SVG-grebnoi__item:nth-child(2){
+        border-left: none;
+        border-right: none;
+    }
+    .SVG-grebnoi section {
+        margin-bottom: 20px;
+    }
+    .SVG-grebnoi__ul {
+        width: 100%;
+        background-color: #E4E4E4;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .SVG-grebnoi__li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-white);
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+    .SVG-grebnoi__bottom-text {
+        margin: 20px auto 20px;
+    }
+    .SVG-grebnoi p.p-blue {
+        margin-top: 20px;
+    }
+}
+/* screens */
